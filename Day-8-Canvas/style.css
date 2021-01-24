@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+     
+}
+
+#draw{
+    border: 5px solid black;
+    margin: 20 auto;
+    
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+#base {
+    width:60px;
+    height:60px;
+  
+
+}
