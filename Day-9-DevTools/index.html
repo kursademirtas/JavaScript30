@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p onclick="makeGreen()">Break Down </p>
+
+    <script>
+        const dogs = [{name:"akbas", age:1}, {name:"buddy", age:10}]
+        const p = document.querySelector("p");
+        function makeGreen() {
+            const p = document.querySelector("p");
+            p.style.color = "green";
+            p.style.Fontsize = "50px";
+        }
+
+        console.warn("This is a Warn");
+        console.error("This is a error");
+        console.clear();
+        console.log(p);
+        console.dir(p);
+
+
+        dogs.forEach(dog => {
+            console.groupCollapsed(`${dog.name}`)
+            console.groupEnd(`${dog.name}`)
+        })
+
+
+        console.count('Wes');
+        console.count('Wes');
+
+        console.time('fetching data');
+        fetch('https://api.github.com/users/wesbos')
+            .then(data => data.json())
+            .then(data => {
+                console.log(data)
+                console.timeEnd("fetching data")
+            })
+    </script>
+</body>
+</html>
